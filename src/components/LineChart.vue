@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Chart from 'chart.js';
 
 export default {
   mounted() {
@@ -11,7 +10,7 @@ export default {
       // var ctx = this.$refs.lineChart.getContext('2d');
       var ctx = this.$refs.lineChart.getContext('2d');
       // eslint-disable-next-line no-unused-vars
-      var chart = new Chart(ctx, {
+      var chart = new this.$_Chart(ctx, {
           // The type of chart we want to create
           type: 'line',
 
@@ -29,7 +28,9 @@ export default {
           // Configuration options go here
           options: {}
       });
-    }
+      // eslint-disable-next-line no-console
+      console.log(this.$_Chart);
+    },
   }
 
 </script>

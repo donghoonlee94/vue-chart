@@ -3,13 +3,12 @@
 </template>
 
 <script>
-import Chart from 'chart.js';
 
 export default {
   mounted() {
     // var ctx = document.getElementById('barChart').getContext('2d');
     // eslint-disable-next-line no-unused-vars
-    var myChart = new Chart(this.$refs.barChart.getContext('2d'), {
+    var myChart = new this.$_Chart(this.$refs.barChart.getContext('2d'), {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
